@@ -12,7 +12,34 @@ export default function NasaAPI() {
         setMars(data);
       });
   }, []);
-  return (
+// API With Card Style
+return(
+    <div className="container">
+<h1>Nasa Mars Details</h1>
+
+<div className="d-flex flex-wrap">
+    {
+        mars.photos.map((photo)=>
+        <div className="card p-2 m-2 w-25">
+
+            <img src={photo.img_src} className="card-img-class-top" height="200" ></img>
+            <div className="card-header">
+                <h2>{photo.camera.full_name}</h2>
+                </div>
+                <div className="card-body">
+                    <p>{photo.rover.name}</p>
+                </div>
+            </div>
+        )
+    }
+
+</div>
+    </div>
+)
+
+ /* 
+// API With Table Style
+ return (
     <div className="contai ner">
       <h1>Mars Photos</h1>
 
@@ -37,5 +64,5 @@ export default function NasaAPI() {
         </tbody>
       </table>
     </div>
-  );
+  );*/
 }
