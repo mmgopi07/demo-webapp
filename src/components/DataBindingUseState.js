@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function () {
+export default function DataBindingUseState() {
   const [procucts, setProduct] = useState([
     "Tv",
     "AC",
@@ -12,7 +12,6 @@ export default function () {
   return (
     <div className="container">
       <h2>Products Details</h2>
-
       <ul>
         {procucts.map((product) => (
           <li key={product}>{product}</li>

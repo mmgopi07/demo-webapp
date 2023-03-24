@@ -13,7 +13,7 @@ function SimpleDataBinding() {
         <dt>Price</dt>
         <dd>{product.Price}</dd>
         <dt>Stock</dt>
-        <dd>{product.stock == true ? "Available" : "Out Of Stock"}</dd>
+        <dd>{product.stock === true ? "Available" : "Out Of Stock"}</dd>
       </dl>
     </div>
   );
